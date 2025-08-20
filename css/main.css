@@ -1,0 +1,71 @@
+body {
+  margin: 2em;
+}
+
+div {
+  width: auto;
+  height: auto;
+}
+
+svg {
+  width: 1200px;
+  height: 500px;
+}
+
+rect {
+  fill: rgb(0, 200, 255);
+  stroke-width: 3;
+  stroke: rgb(152, 14, 14);
+  width: 150px;
+  height: 150px;
+}
+
+circle {
+  stroke:green;
+  stroke-width: 4px;
+  fill:yellow;
+}
+
+.form-outline {
+  margin-right: 0;
+  margin-left: 0;
+  background-color: #fff;
+  border-color: #ddd;
+  border-width: 1px;
+  border-radius: 4px 4px 0 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.dev-note {
+  font-weight: bold;
+  font-style: italic;
+  color: blue;
+}
+
+.disabled {
+  color: #ddd;
+
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+form *.ng-valid[required] {
+  border-left: 5px solid #42A948;
+  /* green */
+}
+
+form *.ng-invalid {
+  border-left: 5px solid #a94442;
+  /* red */
+}
+
+form *.ng-touched {
+  border-right: 5px solid yellow;
+}
+
+form *.ng-dirty {
+  border-right: 5px solid blue;
+}

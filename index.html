@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<title>Tic-Tac-Toe</title>
+<head>
+	<link rel="stylesheet" href="css/main.css"">
+	<link rel="stylesheet" href="css/bootstrap.css"">
+	<script src=""></script>
+</head>
+<script>
+var counter = 0; 
+function handleClick(id) {
+   if (counter++ > 0) {
+      counter = 0;
+   }
+   var circle = document.getElementById(id);
+   circle.style.fill = (counter % 2 == 0) ? 'blue' : 'red';
+}
+function drawGraphic() {
+	var svg = document.getElementById("svg");
+	for (var row=0; row < 40; row++) {
+		var y = 50;
+		if (row > 0) {
+			y += 20 * row;
+		}		
+		for (var col=0; col < 30; col++) {
+			var x = 50;
+			if (col > 0) {
+				x += 20 * col;
+			}
+			var id = row.toString() + col.toString();
+			var circle = "<circle id=" + id + " cx=" + x + " cy=" + y + " r=5 onclick='handleClick(" + id + ")'/>";
+			// console.log(circle);
+			svg.innerHTML += circle;
+		}
+	}
+	
+}
+</script>
+<body>
+
+<svg id="svg"/>
+
+<script>drawGraphic();</script>
+
+</body>
+</html>
